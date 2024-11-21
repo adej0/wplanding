@@ -1,13 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
+import { ChevronDown, ChevronUp, Code, DollarSign, FileText, Globe, Layout, Mail, Menu, Star, Users, Zap } from 'lucide-react'
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Mail, Code, Users, CheckCircle, Globe, Star, ChevronDown, ChevronUp, Menu, DollarSign, Layout, FileText, Zap } from 'lucide-react'
-import Link from "next/link"
+import { useEffect, useState } from 'react'
+
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { Input } from "@/components/ui/input"
+import Link from "next/link"
 
 export default function LandingPage() {
   const [timeLeft, setTimeLeft] = useState(24 * 60 * 60); // 24 hours in seconds
@@ -385,7 +386,7 @@ export default function LandingPage() {
               ].map((testimonial, index) => (
                 <Card key={index} className="border-0 shadow-lg">
                   <CardContent className="p-6">
-                    <p className="text-gray-600 mb-4">"{testimonial.content}"</p>
+                    <p className="text-gray-600 mb-4">&ldquo;{testimonial.content}&ldquo;</p>
                     <div className="flex items-center">
                       <Image src={testimonial.image} width={48} height={48} alt={testimonial.name} className="rounded-full mr-4" />
                       <div>
@@ -546,7 +547,7 @@ export default function LandingPage() {
         <Dialog open={showForm} onOpenChange={setShowForm}>
           <DialogContent>
             <DialogHeader>
-              <DialogTitle>Don't Miss This Opportunity!</DialogTitle>
+              <DialogTitle>Don&lsquo;t Miss This Opportunity!</DialogTitle>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4 mt-4">
               <div>
