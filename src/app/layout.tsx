@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Global WordPress Mastery',
-  description: 'Master WordPress development and launch your global career',
+  description: 'Master WordPress development and launch your global career.',
 }
 
 export default function RootLayout({
